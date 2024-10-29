@@ -25,4 +25,8 @@ public class UserDto implements Serializable {
     public static User fromDtoto(UserDto userDto) {
         return new User(userDto.getUsername(), userDto.getPassword(), userDto.getEmail());
     }
+
+    public static UserDto fromEntity(User user) {
+        return new UserDto(user.getUsername(), user.getPassword(), user.getEmail());
+    }
 }
